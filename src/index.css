@@ -1,0 +1,247 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 70vh;
+  background-color: #f4f4f4;
+}
+
+.app-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 120%;
+  max-width: 600px;
+  transition: transform 0.3s ease;
+}
+
+.app-container:hover {
+  transform: scale(1.02); /* Légère mise à l'échelle au survol */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.todo-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 0.6em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  transition: border-color 0.3s;
+}
+
+.todo-input:focus {
+  border-color: #646cff;
+  outline: none;
+}
+
+.add-button {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-button:hover {
+  background-color: #646cff;
+  transform: translateY(-2px);
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+  flex: 1;
+  margin: 0 0.5rem;
+  border-radius: 8px;
+  padding: 0.6em;
+  background-color: #1a1a1a;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.filter-buttons button:hover {
+  background-color: #646cff;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+  border-bottom: 1px solid #ccc;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.todo-item span {
+  flex: 1;
+  margin-left: 0.5em;
+}
+
+.delete {
+  background-color: #ff4d4d;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 0.5em;
+  transition: background-color 0.3s;
+}
+
+.delete:hover {
+  background-color: #ff1a1a;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+      color: #213547;
+      background-color: #f9f4f4;
+  }
+  .app-container {
+      background-color: #fff;
+  }
+  .todo-input {
+      border-color: #ccc;
+  }
+  .add-button, .filter-buttons button {
+      background-color: #f9f9f9;
+      color: #213547;
+  }
+  .add-button:hover, .filter-buttons button:hover {
+      background-color: #e0e0e0;
+  }
+}
+/* index.css */
+
+/* Styles de base pour l'application */
+.app-container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif; /* Police par défaut */
+}
+
+/* Titre avec animation */
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite alternate, colorChange 3s infinite alternate;
+}
+
+/* Animation de rebond */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Animation de changement de couleur */
+@keyframes colorChange {
+  0% {
+      color: #ff6347; /* Tomato */
+  }
+  25% {
+      color: #4682b4; /* Steel Blue */
+  }
+  50% {
+      color: #32cd32; /* Lime Green */
+  }
+  75% {
+      color: #ffa500; /* Orange */
+  }
+  100% {
+      color: #9370db; /* Medium Purple */
+  }
+}
+
+/* Styles pour le formulaire de tâches */
+.todo-form {
+  margin: 20px 0;
+}
+
+.todo-input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 300px; /* Largeur fixe pour le champ de saisie */
+}
+
+.add-button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Styles pour les boutons de filtre */
+.filter-buttons {
+  margin: 20px 0;
+}
+
+.filter-buttons button {
+  margin: 0 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.dnd-link {
+  display: inline-block;
+  padding: 10px 14px;
+  background-color: #4a4a4a; /* Couleur de fond plus douce */
+  color: #ffffff; /* Couleur de texte blanc */
+  border-radius: 8px; /* Coins arrondis */
+  text-decoration: none; /* Pas de soulignement */
+  margin-bottom: 20px;
+  font-weight: bold; /* Texte en gras */
+  transition: background-color 0.3s, transform 0.2s; /* Transition pour les effets */
+}
+
+.dnd-link:hover {
+  background-color: #6a6a6a; /* Couleur de fond au survol */
+  transform: scale(1.05); /* Légère augmentation de la taille au survol */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
+}
+
+.dnd-link:active {
+  transform: scale(0.95); /* Réduction de la taille lors du clic */
+}

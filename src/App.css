@@ -1,0 +1,86 @@
+/* App.css */
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f4f4f4; /* Couleur de fond */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #333; /* Couleur du texte */
+}
+
+form {
+  margin: 2rem 0;
+}
+
+input[type="text"] {
+  padding: 0.6em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 300px; /* Largeur fixe */
+  font-size: 1em;
+  margin-right: 0.5em; /* Espacement à droite */
+}
+
+input[type="text"]:focus {
+  border-color: #646cff; /* Couleur de bordure au focus */
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #646cff; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte */
+  cursor: pointer;
+  transition: background-color 0.25s, border-color 0.25s;
+}
+
+button:hover {
+  background-color: #535bf2; /* Couleur de fond au survol */
+}
+
+.todo-list {
+  list-style-type: none; /* Supprimer les puces */
+  padding: 0; /* Supprimer le remplissage */
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between; /* Espacement entre l'élément et le bouton */
+  align-items: center; /* Centrer verticalement */
+  padding: 1em;
+  border: 1px solid #ddd; /* Bordure pour chaque tâche */
+  border-radius: 8px; /* Coins arrondis */
+  margin: 0.5em 0; /* Espacement vertical entre les tâches */
+  background-color: white; /* Couleur de fond des tâches */
+  transition: background-color 0.3s; /* Transition de couleur */
+}
+
+.todo-item:hover {
+  background-color: #f9f9f9; /* Couleur de fond au survol */
+}
+
+.todo-item span {
+  flex-grow: 1; /* Permet au texte de s'étendre */
+  margin-left: 1em; /* Espacement à gauche du texte */
+}
+
+button.delete {
+  background-color: #ff4d4f; /* Couleur du bouton de suppression */
+  color: white; /* Couleur du texte */
+}
+
+button.delete:hover {
+  background-color: #ff7875; /* Couleur au survol */
+}
